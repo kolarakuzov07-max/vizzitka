@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ракузов Николай — Адвокат | Уголовные дела, Арбитраж</title>
+<meta name="description" content="Адвокат Ракузов Николай. Уголовные дела, арбитраж, семейное право. Консультации, представительство в суде. +7 999 888 77 66">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black: #0d0d0d;
+    --dark: #1a1a1a;
+    --gray: #666;
+    --light: #f7f7f5;
+    --accent: #8a6d3b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+
+  /* HEADER */
+  header {
+    background: var(--black);
+    color: #fff;
+    padding: 18px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #222;
+  }
+  .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo { font-weight: 700; font-size: 17px; letter-spacing: 1px; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.cta {
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+  }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--black);
+    color: #fff;
+    padding: 90px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -120px;
+    top: -120px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #2a2a2a;
+    border-radius: 50%;
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .hero h1 b { font-weight: 700; }
+  .hero p {
+    color: #aaa;
+    font-size: 17px;
+    max-width: 560px;
+    margin-bottom: 36px;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 34px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { background: #a07f45; }
+  .btn-outline {
+    background: transparent;
+    border: 1px solid #444;
+    margin-left: 12px;
+  }
+  .btn-outline:hover { border-color: var(--accent); background: transparent; }
+
+  /* SECTIONS */
+  section { padding: 80px 24px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-title {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    color: var(--gray);
+    margin-bottom: 50px;
+    max-width: 600px;
+  }
+  .divider {
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 0 24px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: #e0e0e0;
+    border: 1px solid #e0e0e0;
+  }
+  .service {
+    background: #fff;
+    padding: 36px 30px;
+    transition: 0.25s;
+  }
+  .service:hover { background: #fafafa; }
+  .service .num {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .service h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .service p {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+  .service .price {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+  }
+
+  /* PRICES TABLE */
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 15px;
+  }
+  .price-table th {
+    text-align: left;
+    background: var(--black);
+    color: #fff;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .price-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--accent);
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+  .about-visual {
+    background: var(--black);
+    color: #fff;
+    padding: 50px 40px;
+    text-align: center;
+  }
+  .about-visual .scales {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--accent);
+  }
+  .about-visual h3 { font-size: 22px; margin-bottom: 8px; }
+  .about-visual p { color: #999; font-size: 14px; }
+  .about-text p { margin-bottom: 18px; color: #444; }
+  .facts {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .fact .num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: Georgia, serif;
+  }
+  .fact .lbl { font-size: 13px; color: var(--gray); }
+
+  /* CONTACT */
+  .contact {
+    background: var(--black);
+    color: #fff;
+  }
+  .contact .section-title { color: #fff; }
+  .contact .section-sub { color: #999; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  @media (max-width: 800px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #222;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+  }
+  .contact-item:hover { color: var(--accent); }
+  .contact-item .icon {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .contact-item .label { font-size: 12px; color: #777; }
+  .contact-item .value { font-size: 16px; }
+
+  form input, form textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 4px;
+  }
+  form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  form textarea { min-height: 110px; resize: vertical; }
+
+  /* FOOTER */
+  footer {
+    background: #050505;
+    color: #666;
+    padding: 30px 24px;
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid #1a1a1a;
+  }
+  footer a { color: #888; text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 30px; }
+    .hero { padding: 60px 20px; }
+    section { padding: 55px 20px; }
+    .section-title { font-size: 24px; }
+    .btn-outline { margin: 12px 0 0 0; display: block; text-align: center; }
+    .btn { display: block; text-align: center; }
+    .price-table { font-size: 13px; }
+    .price-table th, .price-table td { padding: 12px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <div class="logo">РАКУЗОВ <span>НИКОЛАЙ</span></div>
+    <div class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contact" class="cta">Консультация</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Адвокат</div>
+    <h1 class="serif">Защита ваших интересов<br><b>в суде и до суда</b></h1>
+    <p>Уголовные дела, арбитраж, семейное право. Более 12 лет практики. Работаю по всей России.</p>
+    <a href="#contact" class="btn">Записаться на консультацию</a>
+    <a href="tel:+79998887766" class="btn btn-outline">+7 999 888 77 66</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title serif">Направления работы</h2>
+    <p class="section-sub">Полный спектр юридической помощи — от консультации до представительства в суде.</p>
+
+    <div class="services-grid">
+      <div class="service">
+        <div class="num">01</div>
+        <h3>Уголовные дела</h3>
+        <p>Защита на всех стадиях: доследственная проверка, следствие, суд, апелляция. Выезд адвоката 24/7.</p>
+        <div class="price">от 50 000 ₽</div>
+      </div>
+      <div class="service">
+        <div class="num">02</div>
+        <h3>Арбитраж</h3>
+        <p>Споры с контрагентами, взыскание долгов, банкротство, корпоративные конфликты.</p>
+        <div class="price">от 40 000 ₽</div>
+      </div>
+      <div class="service">
+        <div class="num">03</div>
+        <h3>Семейное право</h3>
+        <p>Развод, раздел имущества, споры о детях, алименты, установление отцовства.</p>
+        <div class="price">от 25 000 ₽</div>
+      </div>
+      <div class="service">
+        <div class="num">04</div>
+        <h3>Недвижимость</h3>
+        <p>Сопровождение сделок, оспаривание права собственности, земельные споры.</p>
+        <div class="price">от 30 000 ₽</div>
+      </div>
+      <div class="service">
+        <div class="num">05</div>
+        <h3>Наследство</h3>
+        <p>Оформление наследства, оспаривание завещания, восстановление сроков.</p>
+        <div class="price">от 25 000 ₽</div>
+      </div>
+      <div class="service">
+        <div class="num">06</div>
+        <h3>Договорная работа</h3>
+        <p>Составление и экспертиза договоров, претензионная работа, правовой аудит.</p>
+        <div class="price">от 15 000 ₽</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section id="prices" style="background:#fff;">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title serif">Стоимость услуг</h2>
+    <p class="section-sub">Точная цена — после консультации. Ниже — ориентировочные тарифы.</p>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Услуга</th>
+          <th>Стоимость</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Устная консультация</td><td>3 000 ₽</td></tr>
+        <tr><td>Письменная консультация / заключение</td><td>7 000 ₽</td></tr>
+        <tr><td>Составление искового заявления</td><td>от 10 000 ₽</td></tr>
+        <tr><td>Составление апелляционной жалобы</td><td>от 15 000 ₽</td></tr>
+        <tr><td>Участие в одном судебном заседании</td><td>от 15 000 ₽</td></tr>
+        <tr><td>Ведение дела в суде первой инстанции</td><td>от 60 000 ₽</td></tr>
+        <tr><td>Защита по уголовному делу (следствие)</td><td>от 50 000 ₽</td></tr>
+        <tr><td>Защита в суде по уголовному делу</td><td>от 70 000 ₽</td></tr>
+        <tr><td>Сопровождение сделки с недвижимостью</td><td>от 30 000 ₽</td></tr>
+        <tr><td>Абонентское обслуживание (месяц)</td><td>от 40 000 ₽</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title serif">Об адвокате</h2>
+    <p class="section-sub">Профессиональная защита с 2012 года.</p>
+
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="scales serif">⚖</div>
+        <h3 class="serif">Ракузов Николай</h3>
+        <p>Адвокат</p>
+      </div>
+      <div class="about-text">
+        <p>Специализируюсь на уголовных делах и арбитражных спорах. Оказываю полный цикл юридической помощи: от первичной консультации до представления интересов в судах всех инстанций.</p>
+        <p>В работе руководствуюсь принципами честности, конфиденциальности и максимальной вовлечённости в каждое дело. Беру ограниченное количество дел, чтобы уделить каждому клиенту достаточно времени.</p>
+        <p>Выезд на следственные действия — в любое время суток.</p>
+
+        <div class="facts">
+          <div class="fact">
+            <div class="num">12+</div>
+            <div class="lbl">лет практики</div>
+          </div>
+          <div class="fact">
+            <div class="num">300+</div>
+            <div class="lbl">выигранных дел</div>
+          </div>
+          <div class="fact">
+            <div class="num">24/7</div>
+            <div class="lbl">на связи</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title serif">Связаться</h2>
+    <p class="section-sub">Запишитесь на консультацию или задайте вопрос — отвечу лично.</p>
+
+    <div class="contact-grid">
+      <div>
+        <a class="contact-item" href="tel:+79998887766">
+          <div class="icon">✆</div>
+          <div>
+            <div class="label">Телефон</div>
+            <div class="value">+7 999 888 77 66</div>
+          </div>
+        </a>
+        <a class="contact-item" href="mailto:rakuzov.nikolay@mail.ru">
+          <div class="icon">✉</div>
+          <div>
+            <div class="label">Email</div>
+            <div class="value">rakuzov.nikolay@mail.ru</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://t.me/rakuzov_nikolay" target="_blank">
+          <div class="icon">✈</div>
+          <div>
+            <div class="label">Telegram</div>
+            <div class="value">@rakuzov_nikolay</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://www.rakuzov-law.ru" target="_blank">
+          <div class="icon">⊕</div>
+          <div>
+            <div class="label">Сайт</div>
+            <div class="value">www.rakuzov-law.ru</div>
+          </div>
+        </a>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Заявка отправлена. Свяжусь с вами в ближайшее время.'); this.reset();">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <textarea placeholder="Кратко опишите ситуацию"></textarea>
+        <button type="submit" class="btn" style="width:100%;">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Ракузов Николай — адвокат. Все права защищены.</p>
+  <p style="margin-top:8px;">
+    <a href="tel:+79998887766">+7 999 888 77 66</a> · 
+    <a href="mailto:rakuzov.nikolay@mail.ru">rakuzov.nikolay@mail.ru</a> · 
+    <a href="https://t.me/rakuzov_nikolay">@rakuzov_nikolay</a>
+  </p>
+</footer>
+
+</body>
+</html>
